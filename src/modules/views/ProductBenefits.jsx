@@ -58,7 +58,6 @@ export default function ProductBenefits() {
   return (
     <Container
       id="benefits"
-      maxWidth
       component="section"
       padding={0}
       paddingLeft="0px"
