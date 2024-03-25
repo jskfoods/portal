@@ -38,7 +38,7 @@ function ProductCTA() {
               onSubmit={handleSubmit}
               sx={{ maxWidth: 400 }}
             >
-              <Typography variant="h2" component="h2" gutterBottom>
+              <Typography variant="h3" component="h3" gutterBottom>
                 Receive offers
               </Typography>
               <Typography variant="h5">
