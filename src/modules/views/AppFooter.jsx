@@ -99,7 +99,7 @@ export default function AppFooter() {
             <Typography>Lic No. 21424850001581</Typography>
           </Box>
           <Box display="flex" spacing={2} alignItems="center">
-            <Box component="a" href="https://mui.com/">
+            <Box component="a" href="https://jskfoods.github.io/portal/">
               <Link
                 aria-label="Chat on WhatsApp"
                 href="https://wa.me/918319998155"
