@@ -19,7 +19,7 @@ function AppAppBar() {
             variant="h6"
             underline="none"
             color="inherit"
-            href="/"
+            href="/portal/"
             sx={{ fontSize: 24 }}
             display="flex"
             alignItems="center"
@@ -37,13 +37,18 @@ function AppAppBar() {
             </Link>
           </Box>
           <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-            <Link variant="h6" underline="none" href="/sign-in" sx={rightLink}>
+            <Link
+              variant="h6"
+              underline="none"
+              href="/portal/sign-in"
+              sx={rightLink}
+            >
               {"Sign In"}
             </Link>
             <Link
               variant="h6"
               underline="none"
-              href="/signup"
+              href="/portal/signup"
               sx={{ ...rightLink, color: "secondary.main" }}
             >
               {"Sign Up"}
