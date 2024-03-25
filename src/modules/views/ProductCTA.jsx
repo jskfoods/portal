@@ -6,6 +6,7 @@ import Typography from "../components/Typography";
 import TextField from "../components/TextField";
 import Snackbar from "../components/Snackbar";
 import Button from "../components/Button";
+import candies from "../../assets/candies.png";
 
 function ProductCTA() {
   const [open, setOpen] = React.useState(false);
@@ -41,7 +42,7 @@ function ProductCTA() {
                 Receive offers
               </Typography>
               <Typography variant="h5">
-                Taste the holidays of the everyday close to home.
+                Taste the new products as they come out and get the best offers
               </Typography>
               <TextField
                 noBorder
@@ -74,13 +75,12 @@ function ProductCTA() {
               right: 0,
               bottom: 0,
               width: "100%",
-              background:
-                "url(/static/themes/onepirate/productCTAImageDots.png)",
+              background: candies,
             }}
           />
           <Box
             component="img"
-            src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750"
+            src={candies}
             alt="call to action"
             sx={{
               position: "absolute",
@@ -88,7 +88,7 @@ function ProductCTA() {
               left: -28,
               right: 0,
               bottom: 0,
-              width: "100%",
+              width: "70%",
               maxWidth: 600,
             }}
           />

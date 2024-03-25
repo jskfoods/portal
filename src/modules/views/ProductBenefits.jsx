@@ -56,13 +56,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
 
 export default function ProductBenefits() {
   return (
-    <Container
-      id="benefits"
-      component="section"
-      padding={0}
-      paddingLeft="0px"
-      sx={{ mt: 8, mb: 4 }}
-    >
+    <Box id="benefits" component="section" sx={{ mt: 8, mb: 4 }}>
       <Typography variant="h4" marked="center" align="center" component="h2">
         Unlock wellness with Amla
       </Typography>
@@ -119,6 +113,6 @@ export default function ProductBenefits() {
           </ImageIconButton>
         ))}
       </Box>
-    </Container>
+    </Box>
   );
 }

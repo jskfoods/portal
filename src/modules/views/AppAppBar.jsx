@@ -2,6 +2,7 @@ import * as React from "react";
 import AppBar from "../components/AppBar";
 import { Box, Link } from "@mui/material";
 import Toolbar from "../components/Toolbar";
+import krishnaLogo from "../../assets/krishna.png";
 
 const rightLink = {
   fontSize: 16,
@@ -20,9 +21,13 @@ function AppAppBar() {
             color="inherit"
             href="/"
             sx={{ fontSize: 24 }}
+            display="flex"
+            alignItems="center"
           >
+            <img src={krishnaLogo} className="logo" />
             {"JSK Foods"}
           </Link>
+          {/* <Box sx={{ flex: 1 }} /> */}
           <Box>
             <Link variant="h6" underline="none" href="#products" sx={rightLink}>
               {"Our Products"}

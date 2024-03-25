@@ -1,11 +1,10 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
+import { Box, Divider, Link } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
 import TextField from "../components/TextField";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import WhatsAppp from "../../assets/WhatsAppButtonGreenSmall.svg";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Copyright() {
@@ -46,68 +45,63 @@ const LANGUAGES = [
 
 export default function AppFooter() {
   return (
-    <Typography
+    <Box
       component="footer"
-      sx={{ display: "flex", bgcolor: "secondary.light" }}
+      sx={{ display: "flex", bgcolor: "secondary.light", pt: 6, pb: 6 }}
     >
-      <Container sx={{ my: 8, display: "flex" }}>
-        <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
-            <Grid
-              container
-              direction="column"
-              justifyContent="flex-end"
-              spacing={2}
-              sx={{ height: 120 }}
-            >
-              <Grid item sx={{ display: "flex" }}>
-                <Box component="a" href="https://mui.com/">
-                  <WhatsAppIcon sx={iconStyle} />
-                </Box>
-                <Box component="a" href="https://twitter.com/MUI_hq">
-                  <InstagramIcon sx={iconStyle} />
-                </Box>
-              </Grid>
-              <Grid item>
-                <Copyright />
-              </Grid>
-            </Grid>
+      <Container>
+        <Grid width="100%" container spacing={4} pt={2} pb={6}>
+          <Grid item xs={3}>
+            <Typography variant="h6">Our Promise</Typography>
+            All our products are handmade with utmost care in safe and sanitized
+            environment, we will never compromise with test and quality.
           </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Legal
-            </Typography>
-            <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/premium-themes/onepirate/terms/">Terms</Link>
-              </Box>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/premium-themes/onepirate/privacy/">Privacy</Link>
-              </Box>
+          <Grid item xs={3}>
+            <Box display="flex" flexDirection="column">
+              <Typography variant="h6">About Us</Typography>
+              <Link>Our Story</Link>
+              <Link>Terms & Conditions</Link>
+              <Link>Privacy Policy</Link>
             </Box>
           </Grid>
-          <Grid item xs={6} sm={8} md={4}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Language
-            </Typography>
-            <TextField
-              select
-              size="medium"
-              variant="standard"
-              SelectProps={{
-                native: true,
-              }}
-              sx={{ mt: 1, width: 150 }}
-            >
-              {LANGUAGES.map((language) => (
-                <option value={language.code} key={language.code}>
-                  {language.name}
-                </option>
-              ))}
-            </TextField>
+          <Grid item xs={3}>
+            <Box display="flex" flexDirection="column">
+              <Typography variant="h6">Customer Care</Typography>
+              <Link>Bulk Orders</Link>
+              <Link>Track your order</Link>
+              <Link>Returns and Refunds</Link>
+            </Box>
+          </Grid>
+          <Grid item xs={3}>
+            <Box display="flex" flexDirection="column">
+              <Typography variant="h6">Contact Us</Typography>
+              <Typography>Plot No. 197B</Typography>
+              <Typography>Sharada Nagar</Typography>
+              <Typography>Indore-452010</Typography>
+              <Typography>Madhya Pradesh</Typography>
+            </Box>
           </Grid>
         </Grid>
+        <Divider />
+        <Box display="flex" justifyContent="space-between" pt={2}>
+          <Box>
+            <Copyright />
+          </Box>
+          <Box display="flex" spacing={2} alignItems="center">
+            <Box component="a" href="https://mui.com/">
+              <Link
+                aria-label="Chat on WhatsApp"
+                href="https://wa.me/918319998155"
+              >
+                <img alt="Chat on WhatsApp" src={WhatsAppp} />
+              </Link>
+            </Box>
+            <Box component="a" href="https://instagram.com/jskfoods">
+              <InstagramIcon sx={iconStyle} />
+            </Box>
+          </Box>
+        </Box>
       </Container>
-    </Typography>
+    </Box>
   );
 }
