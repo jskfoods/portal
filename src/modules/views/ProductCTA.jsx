@@ -52,7 +52,7 @@ function ProductCTA() {
               />
               <Button
                 type="submit"
-                color="primary"
+                color="secondary"
                 variant="contained"
                 sx={{ width: "100%" }}
               >
